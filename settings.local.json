@@ -1,0 +1,29 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:racecenter.letourfemmes.fr)",
+      "WebSearch",
+      "Bash(pip show:*)",
+      "Bash(pip3 show:*)",
+      "Bash(pipx list:*)",
+      "Bash(/dev/null -print)",
+      "Bash(find ~/.cache/uv -path */litellm* -name *.whl)",
+      "Bash(find ~/.cache/uv -path *litellm*1.82.7* -o -path *litellm*1.82.8*)",
+      "Bash(find ~/Library/Application Support/Cursor -path */litellm*)",
+      "Bash(find ~/.cursor -path */litellm*)",
+      "Bash(find ~/Library/Application Support/Code -name *litellm*)",
+      "Bash(head -20 find ~/.vscode -name *litellm*)",
+      "Bash(head -20 find ~/Library/Caches/com.microsoft.VSCode -name *litellm*)",
+      "Bash(find ~/Library/Application Support/Code -name *.pth)",
+      "WebFetch(domain:socket.dev)",
+      "WebFetch(domain:www.npmjs.com)",
+      "WebFetch(domain:securityaffairs.com)",
+      "Bash(flowise --version)",
+      "Bash(npm list:*)",
+      "Bash(docker stop:*)",
+      "Bash(docker rm:*)",
+      "Bash(python3 -c \"import json,sys; data=json.load\\(sys.stdin\\); env=data[0]['Config']['Env']; [print\\(e\\) for e in env if 'FLOWISE' in e or 'PORT' in e]\")",
+      "Bash(sqlite3:*)"
+    ]
+  }
+}

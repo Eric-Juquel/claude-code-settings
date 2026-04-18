@@ -1,0 +1,37 @@
+{
+  "eval_id": 2,
+  "eval_name": "setup-from-scratch-react18",
+  "prompt": "J'ai un projet React 18 avec Vite, React Query et React Router mais sans configuration de tests. Mets en place la stack de test complète (Vitest + React Testing Library + MSW) et fournis un exemple de test minimaliste pour un composant Button.",
+  "assertions": [
+    {
+      "text": "Mention d'invoquer npm-security-check avant d'installer les dépendances",
+      "passed": null,
+      "evidence": null
+    },
+    {
+      "text": "La configuration Vitest est ajoutée à vite.config.ts (pas dans un fichier séparé vitest.config.ts)",
+      "passed": null,
+      "evidence": null
+    },
+    {
+      "text": "Le fichier test-utils.tsx inclut les wrappers QueryClientProvider et MemoryRouter détectés dans le projet",
+      "passed": null,
+      "evidence": null
+    },
+    {
+      "text": "Utilisation de import.meta.env.VITE_API_BASE_URL dans les handlers MSW (pas d'URL hardcodée)",
+      "passed": null,
+      "evidence": null
+    },
+    {
+      "text": "Les trois scripts proposés sont exactement : test, test:run, test:coverage (pas d'autres scripts superflus)",
+      "passed": null,
+      "evidence": null
+    },
+    {
+      "text": "L'architecture src/tests/ est respectée avec setup.ts, test-utils.tsx, msw/server.ts et msw/handlers/",
+      "passed": null,
+      "evidence": null
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "skill_name": "react-vitest-unit-test",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Je travaille sur TalentLens (React 19, Vitest 4, MSW 2 déjà configurés). Écris les tests unitaires pour le composant DropZone qui se trouve dans packages/web/src/features/home/components/DropZone.tsx. Il s'agit d'un composant de drag & drop pour uploader des fichiers PDF.",
+      "expected_output": "Des tests dans packages/web/src/features/home/__tests__/DropZone.test.tsx utilisant le custom render de @/tests/test-utils, userEvent pour les interactions drag/drop, des assertions sur les états (idle, hover, error), et des cas de non-régression. URL MSW via import.meta.env.VITE_API_BASE_URL.",
+      "files": [
+        "/Users/eric.juquel/Formation/claude-code/talent-lens/packages/web/src/features/home/components/DropZone.tsx",
+        "/Users/eric.juquel/Formation/claude-code/talent-lens/packages/web/src/tests/test-utils.tsx",
+        "/Users/eric.juquel/Formation/claude-code/talent-lens/packages/web/src/tests/msw/handlers/upload.ts",
+        "/Users/eric.juquel/Formation/claude-code/talent-lens/packages/web/package.json"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "J'ai un projet React 18 avec Vite, React Query et React Router mais sans configuration de tests. Mets en place la stack de test complète (Vitest + React Testing Library + MSW) et fournis un exemple de test minimaliste pour un composant Button.",
+      "expected_output": "Un plan de configuration complet : installation des dépendances (après npm-security-check), modification de vite.config.ts, création de src/tests/setup.ts, src/tests/test-utils.tsx avec les providers React Query + MemoryRouter, src/tests/msw/server.ts et handlers/. Utilisation de import.meta.env.VITE_API_BASE_URL. Scripts test/test:run/test:coverage dans package.json. Un test exemple fonctionnel.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "Avant de refactoriser le composant ChatBubble dans TalentLens, j'ai besoin de tests de non-régression. Écris des tests qui couvrent tous les cas critiques pour packages/web/src/features/home/components/ChatBubble.tsx.",
+      "expected_output": "Tests de non-régression dans __tests__/ChatBubble.test.tsx couvrant : rendu selon le rôle (user/assistant), formatage du contenu markdown, états de chargement, accessibilité. Utilisation du custom render, assertions orientées comportement observable (pas de détails d'implémentation).",
+      "files": [
+        "/Users/eric.juquel/Formation/claude-code/talent-lens/packages/web/src/features/home/components/ChatBubble.tsx",
+        "/Users/eric.juquel/Formation/claude-code/talent-lens/packages/web/src/tests/test-utils.tsx",
+        "/Users/eric.juquel/Formation/claude-code/talent-lens/packages/web/package.json"
+      ]
+    }
+  ]
+}

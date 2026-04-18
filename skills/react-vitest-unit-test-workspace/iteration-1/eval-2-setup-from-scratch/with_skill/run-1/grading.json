@@ -1,0 +1,13 @@
+{
+  "eval_id": 2,
+  "run": "with_skill",
+  "summary": { "passed": 6, "failed": 0, "total": 6, "pass_rate": 1.0 },
+  "expectations": [
+    { "text": "Mention npm-security-check avant install", "passed": true, "evidence": "Commande d'install explicitement précédée de 'after /npm-security-check'" },
+    { "text": "Config Vitest dans vite.config.ts (pas de fichier séparé)", "passed": true, "evidence": "vite.config.ts avec section test, defineConfig depuis 'vitest/config'" },
+    { "text": "test-utils.tsx avec QueryClientProvider + MemoryRouter", "passed": true, "evidence": "Template B : QueryClient (retry:false, gcTime:0) + MemoryRouter — correct React 18" },
+    { "text": "import.meta.env.VITE_API_BASE_URL dans handlers (pas d'URL hardcodée)", "passed": true, "evidence": "handlers/index.ts vide, aucune URL hardcodée" },
+    { "text": "Exactement 3 scripts : test, test:run, test:coverage", "passed": true, "evidence": "package_scripts.json contient exactement ces 3 scripts" },
+    { "text": "Architecture src/tests/ avec setup.ts, test-utils.tsx, msw/", "passed": true, "evidence": "Tous les fichiers respectent la structure src/tests/" }
+  ]
+}

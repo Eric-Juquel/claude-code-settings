@@ -1,0 +1,37 @@
+{
+  "eval_id": 1,
+  "eval_name": "dropzone-tests-existing-setup",
+  "prompt": "Je travaille sur TalentLens (React 19, Vitest 4, MSW 2 déjà configurés). Écris les tests unitaires pour le composant DropZone qui se trouve dans packages/web/src/features/home/components/DropZone.tsx. Il s'agit d'un composant de drag & drop pour uploader des fichiers PDF.",
+  "assertions": [
+    {
+      "text": "Le fichier de test est créé dans __tests__/DropZone.test.tsx (dans le répertoire du feature, pas dans src/tests/)",
+      "passed": null,
+      "evidence": null
+    },
+    {
+      "text": "Le test importe render depuis @/tests/test-utils (pas directement depuis @testing-library/react)",
+      "passed": null,
+      "evidence": null
+    },
+    {
+      "text": "Les interactions utilisateur utilisent userEvent (pas fireEvent)",
+      "passed": null,
+      "evidence": null
+    },
+    {
+      "text": "Aucune URL hardcodée — utilisation de import.meta.env.VITE_API_BASE_URL si des appels API sont mockés",
+      "passed": null,
+      "evidence": null
+    },
+    {
+      "text": "Au moins 3 cas de test distincts couvrant des comportements observables différents (pas juste une seule assertion toBeInTheDocument)",
+      "passed": null,
+      "evidence": null
+    },
+    {
+      "text": "Les tests async utilisent waitFor ou findBy (pas de setTimeout arbitraire)",
+      "passed": null,
+      "evidence": null
+    }
+  ]
+}

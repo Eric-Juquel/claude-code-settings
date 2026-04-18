@@ -1,0 +1,42 @@
+{
+  "skill_name": "github-ci-setup",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Je viens de créer un monorepo pnpm avec apps/frontend (React 19 + Vite) et apps/backend (stub pour l'instant). Je veux mettre en place une CI GitHub Actions qui tourne les tests et le build automatiquement sur chaque PR. Configure ça pour moi.",
+      "expected_output": "Un fichier .github/workflows/ci.yml généré avec 3 jobs parallèles (ci-frontend, ci-backend stub, security Trivy), un fichier apps/frontend/.env.test créé, et un checklist des étapes manuelles restantes (typecheck script, branch protection).",
+      "assertions": [
+        "Le fichier .github/workflows/ci.yml est créé",
+        "Le fichier contient un job ci-frontend avec les steps typecheck, lint, test:run et build",
+        "Le fichier contient un job ci-backend de type stub (echo uniquement, pas de vraies étapes)",
+        "Le fichier contient un job security avec Trivy (scan npm et image Docker)",
+        "FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true est présent dans le workflow",
+        "pnpm/action-setup@v4 est utilisé avec version: 10",
+        "Le fichier apps/frontend/.env.test est créé avec VITE_API_BASE_URL=http://localhost:3001",
+        "Un checklist des étapes manuelles est affiché (typecheck script, branch protection)"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "I have a pnpm monorepo with a Vue 3 + Vite frontend (package name: 'web') and a NestJS backend (package name: 'api'). Add GitHub Actions CI to run on PRs targeting main and staging branches.",
+      "expected_output": "ci.yml with ci-frontend (filter: web), ci-backend (NestJS with lint+test+build steps, filter: api), security job, targeting branches main and staging. .env.test created for web package.",
+      "assertions": [
+        "Le fichier .github/workflows/ci.yml est créé",
+        "Le job ci-frontend utilise --filter web (pas --filter frontend)",
+        "Le job ci-backend contient de vraies étapes NestJS (lint, test, build) et utilise --filter api",
+        "Les branches main et staging sont dans les déclencheurs push et pull_request",
+        "Un fichier apps/web/.env.test est créé (dans le dossier web, pas frontend)"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "setup ci for my monorepo",
+      "expected_output": "Le skill détecte la structure du repo, pose les questions nécessaires, génère le ci.yml adapté et affiche le checklist.",
+      "assertions": [
+        "Le skill tente de détecter la structure du repo avant de poser des questions",
+        "Le skill pose au minimum une question pour confirmer les noms des packages ou le type de backend",
+        "Un fichier .github/workflows/ci.yml est généré à la fin"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "eval_id": 1,
+  "run": "without_skill",
+  "summary": { "passed": 3, "failed": 3, "total": 6, "pass_rate": 0.5 },
+  "expectations": [
+    { "text": "Fichier dans __tests__/ du feature (import relatif)", "passed": false, "evidence": "Import absolu '@/features/home/components/DropZone' — fichier probablement pas dans features/home/__tests__/" },
+    { "text": "render importé depuis @/tests/test-utils", "passed": false, "evidence": "Ligne 2: import { screen, fireEvent } from '@testing-library/react' — import direct RTL" },
+    { "text": "userEvent utilisé pour les interactions (pas fireEvent)", "passed": false, "evidence": "fireEvent extensivement utilisé pour drag ET interactions de base" },
+    { "text": "Aucune URL hardcodée — import.meta.env.VITE_API_BASE_URL si API mockée", "passed": true, "evidence": "Pas d'appels API dans ce composant, aucune URL" },
+    { "text": "Au moins 3 cas de test distincts sur comportements observables", "passed": true, "evidence": "25 tests sur 7 describe blocks" },
+    { "text": "Async avec waitFor/findBy (pas setTimeout)", "passed": true, "evidence": "async/await avec userEvent, pas de setTimeout" }
+  ]
+}

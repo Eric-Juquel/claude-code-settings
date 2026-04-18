@@ -1,0 +1,32 @@
+{
+  "eval_id": 3,
+  "eval_name": "regression-tests-chatbubble",
+  "prompt": "Avant de refactoriser le composant ChatBubble dans TalentLens, j'ai besoin de tests de non-régression. Écris des tests qui couvrent tous les cas critiques pour packages/web/src/features/home/components/ChatBubble.tsx.",
+  "assertions": [
+    {
+      "text": "Le fichier de test est dans features/home/__tests__/ChatBubble.test.tsx",
+      "passed": null,
+      "evidence": null
+    },
+    {
+      "text": "Les tests couvrent au moins le rendu selon le rôle (user vs assistant) — comportements visuels distincts",
+      "passed": null,
+      "evidence": null
+    },
+    {
+      "text": "Les tests utilisent getByRole ou getByText en priorité (pas getByTestId comme premier choix)",
+      "passed": null,
+      "evidence": null
+    },
+    {
+      "text": "Les tests sont orientés comportement observable (pas de test de classes CSS ou d'implémentation interne)",
+      "passed": null,
+      "evidence": null
+    },
+    {
+      "text": "Import depuis @/tests/test-utils (custom render avec providers)",
+      "passed": null,
+      "evidence": null
+    }
+  ]
+}

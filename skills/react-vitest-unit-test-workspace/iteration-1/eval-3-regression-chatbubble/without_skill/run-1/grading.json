@@ -1,0 +1,12 @@
+{
+  "eval_id": 3,
+  "run": "without_skill",
+  "summary": { "passed": 5, "failed": 0, "total": 5, "pass_rate": 1.0 },
+  "expectations": [
+    { "text": "Fichier dans features/home/__tests__/ChatBubble.test.tsx", "passed": true, "evidence": "Architecture existante respectée par l'agent baseline" },
+    { "text": "Tests couvrent rendu user vs assistant (comportements distincts)", "passed": true, "evidence": "20 tests : rôles, markdown, layout, edge cases" },
+    { "text": "getByRole/getByText en priorité (pas getByTestId)", "passed": true, "evidence": "getByRole et getByText utilisés en priorité" },
+    { "text": "Tests orientés comportement observable (pas classes CSS internes)", "passed": true, "evidence": "Tests sur contenu visible, markdown, ARIA" },
+    { "text": "Import depuis @/tests/test-utils (custom render)", "passed": true, "evidence": "L'agent a détecté et utilisé test-utils.tsx existant" }
+  ]
+}

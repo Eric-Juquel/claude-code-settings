@@ -1,0 +1,2 @@
+generate a commit message based on the changes wihin the current branch.The commit message must be short and to-the-point and provide a summary of the changes. the commit message should begin by the type of change (e.g., "feat", "fix", "docs", "style", "refactor", "test", "chore") followed by a brief description of the change.The commit should ONLY include the type of change and a brief description, without any additional details or explanations.
+Then commit those changes to the current branch.

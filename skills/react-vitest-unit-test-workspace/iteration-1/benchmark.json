@@ -1,0 +1,343 @@
+{
+  "metadata": {
+    "skill_name": "react-vitest-unit-test",
+    "skill_path": "<path/to/skill>",
+    "executor_model": "<model-name>",
+    "analyzer_model": "<model-name>",
+    "timestamp": "2026-04-17T09:31:31Z",
+    "evals_run": [
+      1,
+      2,
+      3
+    ],
+    "runs_per_configuration": 3
+  },
+  "runs": [
+    {
+      "eval_id": 1,
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 6,
+        "failed": 0,
+        "total": 6,
+        "time_seconds": 72.8,
+        "tokens": 28694,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Fichier dans __tests__/ du feature (import relatif)",
+          "passed": true,
+          "evidence": "Import '../components/DropZone' confirme placement dans features/home/__tests__/"
+        },
+        {
+          "text": "render import\u00e9 depuis @/tests/test-utils",
+          "passed": true,
+          "evidence": "import { render, screen, fireEvent } from '@/tests/test-utils'"
+        },
+        {
+          "text": "userEvent utilis\u00e9 pour les interactions (pas fireEvent)",
+          "passed": true,
+          "evidence": "userEvent pour click/upload ; fireEvent pour drag events (limitation jsdom DataTransfer)"
+        },
+        {
+          "text": "Aucune URL hardcod\u00e9e \u2014 import.meta.env.VITE_API_BASE_URL si API mock\u00e9e",
+          "passed": true,
+          "evidence": "Pas d'appels API dans ce composant, aucune URL"
+        },
+        {
+          "text": "Au moins 3 cas de test distincts sur comportements observables",
+          "passed": true,
+          "evidence": "16 tests sur 5 describe blocks"
+        },
+        {
+          "text": "Async avec waitFor/findBy (pas setTimeout)",
+          "passed": true,
+          "evidence": "async/await avec userEvent, aucun setTimeout"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 2,
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 6,
+        "failed": 0,
+        "total": 6,
+        "time_seconds": 78.9,
+        "tokens": 24482,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Mention npm-security-check avant install",
+          "passed": true,
+          "evidence": "Commande d'install explicitement pr\u00e9c\u00e9d\u00e9e de 'after /npm-security-check'"
+        },
+        {
+          "text": "Config Vitest dans vite.config.ts (pas de fichier s\u00e9par\u00e9)",
+          "passed": true,
+          "evidence": "vite.config.ts avec section test, defineConfig depuis 'vitest/config'"
+        },
+        {
+          "text": "test-utils.tsx avec QueryClientProvider + MemoryRouter",
+          "passed": true,
+          "evidence": "Template B : QueryClient (retry:false, gcTime:0) + MemoryRouter \u2014 correct React 18"
+        },
+        {
+          "text": "import.meta.env.VITE_API_BASE_URL dans handlers (pas d'URL hardcod\u00e9e)",
+          "passed": true,
+          "evidence": "handlers/index.ts vide, aucune URL hardcod\u00e9e"
+        },
+        {
+          "text": "Exactement 3 scripts : test, test:run, test:coverage",
+          "passed": true,
+          "evidence": "package_scripts.json contient exactement ces 3 scripts"
+        },
+        {
+          "text": "Architecture src/tests/ avec setup.ts, test-utils.tsx, msw/",
+          "passed": true,
+          "evidence": "Tous les fichiers respectent la structure src/tests/"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 3,
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 5,
+        "failed": 0,
+        "total": 5,
+        "time_seconds": 81.3,
+        "tokens": 28483,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Fichier dans features/home/__tests__/ChatBubble.test.tsx",
+          "passed": true,
+          "evidence": "Architecture feature-first respect\u00e9e"
+        },
+        {
+          "text": "Tests couvrent rendu user vs assistant (comportements distincts)",
+          "passed": true,
+          "evidence": "4 tests user + 4 tests assistant : label, layout, contenu, candidateName"
+        },
+        {
+          "text": "getByRole/getByText en priorit\u00e9 (pas getByTestId)",
+          "passed": true,
+          "evidence": "getByRole et getByText utilis\u00e9s, aucun getByTestId"
+        },
+        {
+          "text": "Tests orient\u00e9s comportement observable (pas classes CSS internes)",
+          "passed": true,
+          "evidence": "Tests sur contenu visible, markdown rendu, ARIA. Classes CSS uniquement pour layout (composant pr\u00e9sentationnel)"
+        },
+        {
+          "text": "Import depuis @/tests/test-utils (custom render)",
+          "passed": true,
+          "evidence": "Pattern test-utils respect\u00e9"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 1,
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.5,
+        "passed": 3,
+        "failed": 3,
+        "total": 6,
+        "time_seconds": 69.4,
+        "tokens": 22570,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Fichier dans __tests__/ du feature (import relatif)",
+          "passed": false,
+          "evidence": "Import absolu '@/features/home/components/DropZone' \u2014 fichier probablement pas dans features/home/__tests__/"
+        },
+        {
+          "text": "render import\u00e9 depuis @/tests/test-utils",
+          "passed": false,
+          "evidence": "Ligne 2: import { screen, fireEvent } from '@testing-library/react' \u2014 import direct RTL"
+        },
+        {
+          "text": "userEvent utilis\u00e9 pour les interactions (pas fireEvent)",
+          "passed": false,
+          "evidence": "fireEvent extensivement utilis\u00e9 pour drag ET interactions de base"
+        },
+        {
+          "text": "Aucune URL hardcod\u00e9e \u2014 import.meta.env.VITE_API_BASE_URL si API mock\u00e9e",
+          "passed": true,
+          "evidence": "Pas d'appels API dans ce composant, aucune URL"
+        },
+        {
+          "text": "Au moins 3 cas de test distincts sur comportements observables",
+          "passed": true,
+          "evidence": "25 tests sur 7 describe blocks"
+        },
+        {
+          "text": "Async avec waitFor/findBy (pas setTimeout)",
+          "passed": true,
+          "evidence": "async/await avec userEvent, pas de setTimeout"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 2,
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.5,
+        "passed": 3,
+        "failed": 3,
+        "total": 6,
+        "time_seconds": 65.2,
+        "tokens": 17165,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Mention npm-security-check avant install",
+          "passed": false,
+          "evidence": "Aucune mention de npm-security-check \u2014 installation sans v\u00e9rification de s\u00e9curit\u00e9"
+        },
+        {
+          "text": "Config Vitest dans vite.config.ts (pas de fichier s\u00e9par\u00e9)",
+          "passed": true,
+          "evidence": "vite.config.ts avec section test int\u00e9gr\u00e9e"
+        },
+        {
+          "text": "test-utils.tsx avec QueryClientProvider + MemoryRouter",
+          "passed": true,
+          "evidence": "QueryClient + MemoryRouter pr\u00e9sents dans test-utils.tsx"
+        },
+        {
+          "text": "import.meta.env.VITE_API_BASE_URL dans handlers (pas d'URL hardcod\u00e9e)",
+          "passed": false,
+          "evidence": "handlers/index.ts contient '/api/health' hardcod\u00e9"
+        },
+        {
+          "text": "Exactement 3 scripts : test, test:run, test:coverage",
+          "passed": false,
+          "evidence": "4 scripts g\u00e9n\u00e9r\u00e9s : test (valeur incorrecte), test:watch, test:coverage, test:ui"
+        },
+        {
+          "text": "Architecture src/tests/ avec setup.ts, test-utils.tsx, msw/",
+          "passed": true,
+          "evidence": "Structure src/tests/ pr\u00e9sente"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 3,
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 5,
+        "failed": 0,
+        "total": 5,
+        "time_seconds": 67.5,
+        "tokens": 22158,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Fichier dans features/home/__tests__/ChatBubble.test.tsx",
+          "passed": true,
+          "evidence": "Architecture existante respect\u00e9e par l'agent baseline"
+        },
+        {
+          "text": "Tests couvrent rendu user vs assistant (comportements distincts)",
+          "passed": true,
+          "evidence": "20 tests : r\u00f4les, markdown, layout, edge cases"
+        },
+        {
+          "text": "getByRole/getByText en priorit\u00e9 (pas getByTestId)",
+          "passed": true,
+          "evidence": "getByRole et getByText utilis\u00e9s en priorit\u00e9"
+        },
+        {
+          "text": "Tests orient\u00e9s comportement observable (pas classes CSS internes)",
+          "passed": true,
+          "evidence": "Tests sur contenu visible, markdown, ARIA"
+        },
+        {
+          "text": "Import depuis @/tests/test-utils (custom render)",
+          "passed": true,
+          "evidence": "L'agent a d\u00e9tect\u00e9 et utilis\u00e9 test-utils.tsx existant"
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "run_summary": {
+    "with_skill": {
+      "pass_rate": {
+        "mean": 1.0,
+        "stddev": 0.0,
+        "min": 1.0,
+        "max": 1.0
+      },
+      "time_seconds": {
+        "mean": 77.6667,
+        "stddev": 4.3822,
+        "min": 72.8,
+        "max": 81.3
+      },
+      "tokens": {
+        "mean": 27219.6667,
+        "stddev": 2373.235,
+        "min": 24482,
+        "max": 28694
+      }
+    },
+    "without_skill": {
+      "pass_rate": {
+        "mean": 0.6667,
+        "stddev": 0.2887,
+        "min": 0.5,
+        "max": 1.0
+      },
+      "time_seconds": {
+        "mean": 67.3667,
+        "stddev": 2.1032,
+        "min": 65.2,
+        "max": 69.4
+      },
+      "tokens": {
+        "mean": 20631.0,
+        "stddev": 3008.7045,
+        "min": 17165,
+        "max": 22570
+      }
+    },
+    "delta": {
+      "pass_rate": "+0.33",
+      "time_seconds": "+10.3",
+      "tokens": "+6589"
+    }
+  },
+  "notes": []
+}

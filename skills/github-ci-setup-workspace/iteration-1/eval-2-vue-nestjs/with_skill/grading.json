@@ -1,0 +1,11 @@
+{
+  "eval_id": 2,
+  "config": "with_skill",
+  "assertions": [
+    {"text": "--filter web utilisé (pas --filter frontend)", "passed": true, "evidence": "pnpm --filter web present"},
+    {"text": "ci-backend NestJS avec --filter api et vraies étapes", "passed": true, "evidence": "pnpm --filter api lint/test:run/build present"},
+    {"text": "Branches main et staging dans les triggers", "passed": true, "evidence": "branches: [main, staging]"},
+    {"text": ".env.test créé pour apps/web", "passed": true, "evidence": ".env.test file present"},
+    {"text": "Pas de --filter frontend par erreur", "passed": true, "evidence": "--filter frontend absent"}
+  ]
+}

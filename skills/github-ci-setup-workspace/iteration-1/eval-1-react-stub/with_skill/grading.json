@@ -1,0 +1,14 @@
+{
+  "eval_id": 1,
+  "config": "with_skill",
+  "assertions": [
+    {"text": "ci.yml est créé", "passed": true, "evidence": "File exists at outputs/ci.yml"},
+    {"text": "ci-frontend avec typecheck/lint/test:run/build", "passed": true, "evidence": "All 4 steps present"},
+    {"text": "ci-backend est un stub (echo uniquement)", "passed": true, "evidence": "echo Backend CI will be configured"},
+    {"text": "Job security/Trivy présent", "passed": true, "evidence": "aquasecurity/trivy-action@0.35.0 present twice"},
+    {"text": "FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true", "passed": true, "evidence": "Present in env block"},
+    {"text": "pnpm/action-setup@v4 utilisé", "passed": true, "evidence": "pnpm/action-setup@v4 present"},
+    {"text": ".env.test créé", "passed": true, "evidence": "File exists with correct content"},
+    {"text": "Checklist manuel affiché", "passed": true, "evidence": "transcript shows checklist items"}
+  ]
+}

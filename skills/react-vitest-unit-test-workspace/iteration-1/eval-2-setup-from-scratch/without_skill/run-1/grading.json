@@ -1,0 +1,13 @@
+{
+  "eval_id": 2,
+  "run": "without_skill",
+  "summary": { "passed": 3, "failed": 3, "total": 6, "pass_rate": 0.5 },
+  "expectations": [
+    { "text": "Mention npm-security-check avant install", "passed": false, "evidence": "Aucune mention de npm-security-check — installation sans vérification de sécurité" },
+    { "text": "Config Vitest dans vite.config.ts (pas de fichier séparé)", "passed": true, "evidence": "vite.config.ts avec section test intégrée" },
+    { "text": "test-utils.tsx avec QueryClientProvider + MemoryRouter", "passed": true, "evidence": "QueryClient + MemoryRouter présents dans test-utils.tsx" },
+    { "text": "import.meta.env.VITE_API_BASE_URL dans handlers (pas d'URL hardcodée)", "passed": false, "evidence": "handlers/index.ts contient '/api/health' hardcodé" },
+    { "text": "Exactement 3 scripts : test, test:run, test:coverage", "passed": false, "evidence": "4 scripts générés : test (valeur incorrecte), test:watch, test:coverage, test:ui" },
+    { "text": "Architecture src/tests/ avec setup.ts, test-utils.tsx, msw/", "passed": true, "evidence": "Structure src/tests/ présente" }
+  ]
+}

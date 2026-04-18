@@ -1,0 +1,12 @@
+{
+  "eval_id": 3,
+  "run": "with_skill",
+  "summary": { "passed": 5, "failed": 0, "total": 5, "pass_rate": 1.0 },
+  "expectations": [
+    { "text": "Fichier dans features/home/__tests__/ChatBubble.test.tsx", "passed": true, "evidence": "Architecture feature-first respectée" },
+    { "text": "Tests couvrent rendu user vs assistant (comportements distincts)", "passed": true, "evidence": "4 tests user + 4 tests assistant : label, layout, contenu, candidateName" },
+    { "text": "getByRole/getByText en priorité (pas getByTestId)", "passed": true, "evidence": "getByRole et getByText utilisés, aucun getByTestId" },
+    { "text": "Tests orientés comportement observable (pas classes CSS internes)", "passed": true, "evidence": "Tests sur contenu visible, markdown rendu, ARIA. Classes CSS uniquement pour layout (composant présentationnel)" },
+    { "text": "Import depuis @/tests/test-utils (custom render)", "passed": true, "evidence": "Pattern test-utils respecté" }
+  ]
+}

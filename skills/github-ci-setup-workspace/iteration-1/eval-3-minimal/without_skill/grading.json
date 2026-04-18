@@ -1,0 +1,9 @@
+{
+  "eval_id": 3,
+  "config": "without_skill",
+  "assertions": [
+    {"text": "ci.yml généré à la fin", "passed": true, "evidence": "ci.yml exists"},
+    {"text": "Skill détecte la structure avant de poser des questions", "passed": false, "evidence": "No detection phase, direct generation with pnpm -r"},
+    {"text": "Au moins une question posée pour confirmer", "passed": false, "evidence": "No questions asked"}
+  ]
+}

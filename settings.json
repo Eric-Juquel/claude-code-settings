@@ -1,0 +1,38 @@
+{
+  "permissions": {
+    "deny": [
+      "Bash(**/.env)",
+      "Write(**/.env)",
+      "Read(.env)",
+      "Read(.env.*)",
+      "Read(**/.env)",
+      "Read(**/.env.*)",
+      "Read(**/secrets.*)",
+      "Read(**/credentials.*)",
+      "Read(**/.netrc)",
+      "Read(**/.aws/credentials)",
+      "Read(**/.aws/config)",
+      "Read(**/id_rsa)",
+      "Read(**/id_ed25519)",
+      "Read(**/*.pem)",
+      "Read(**/*.key)",
+      "Read(**/*.p12)",
+      "Read(**/*.pfx)",
+      "Read(**/keystore.*)",
+      "Read(**/serviceAccountKey.json)",
+      "Read(**/google-services.json)",
+      "Read(**/secrets/**)",
+      "Read(./config/credentials.json)",
+      "Read(**/config/credentials.json)",
+      "Read(./*.ipynb)",
+      "Read(**/*.ipynb)"
+    ]
+  },
+  "enabledPlugins": {
+    "playwright@claude-plugins-official": true,
+    "typescript-lsp@claude-plugins-official": true,
+    "superpowers@claude-plugins-official": true
+  },
+  "effortLevel": "medium",
+  "model": "claude-sonnet"
+}

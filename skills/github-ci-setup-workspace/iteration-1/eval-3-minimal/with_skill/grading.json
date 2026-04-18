@@ -1,0 +1,9 @@
+{
+  "eval_id": 3,
+  "config": "with_skill",
+  "assertions": [
+    {"text": "ci.yml généré à la fin", "passed": true, "evidence": "ci.yml exists"},
+    {"text": "Skill détecte la structure avant de poser des questions", "passed": true, "evidence": "transcript shows detection phase before questions"},
+    {"text": "Au moins une question posée pour confirmer", "passed": true, "evidence": "transcript shows question asked"}
+  ]
+}

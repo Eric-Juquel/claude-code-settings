@@ -1,0 +1,13 @@
+{
+  "eval_id": 1,
+  "run": "with_skill",
+  "summary": { "passed": 6, "failed": 0, "total": 6, "pass_rate": 1.0 },
+  "expectations": [
+    { "text": "Fichier dans __tests__/ du feature (import relatif)", "passed": true, "evidence": "Import '../components/DropZone' confirme placement dans features/home/__tests__/" },
+    { "text": "render importé depuis @/tests/test-utils", "passed": true, "evidence": "import { render, screen, fireEvent } from '@/tests/test-utils'" },
+    { "text": "userEvent utilisé pour les interactions (pas fireEvent)", "passed": true, "evidence": "userEvent pour click/upload ; fireEvent pour drag events (limitation jsdom DataTransfer)" },
+    { "text": "Aucune URL hardcodée — import.meta.env.VITE_API_BASE_URL si API mockée", "passed": true, "evidence": "Pas d'appels API dans ce composant, aucune URL" },
+    { "text": "Au moins 3 cas de test distincts sur comportements observables", "passed": true, "evidence": "16 tests sur 5 describe blocks" },
+    { "text": "Async avec waitFor/findBy (pas setTimeout)", "passed": true, "evidence": "async/await avec userEvent, aucun setTimeout" }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "eval_id": 1,
+  "config": "without_skill",
+  "assertions": [
+    {"text": "ci.yml est créé", "passed": true, "evidence": "File exists"},
+    {"text": "ci-frontend avec typecheck/lint/test:run/build", "passed": false, "evidence": "No typecheck or lint steps"},
+    {"text": "ci-backend est un stub (echo uniquement)", "passed": false, "evidence": "No separate ci-backend job"},
+    {"text": "Job security/Trivy présent", "passed": false, "evidence": "No Trivy"},
+    {"text": "FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true", "passed": false, "evidence": "Missing"},
+    {"text": "pnpm/action-setup@v4 utilisé", "passed": false, "evidence": "Uses npm install -g pnpm"},
+    {"text": ".env.test créé", "passed": false, "evidence": "No .env.test generated"},
+    {"text": "Checklist manuel affiché", "passed": false, "evidence": "No checklist"}
+  ]
+}

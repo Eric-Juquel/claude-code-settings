@@ -1,0 +1,35 @@
+{
+  "version": 2,
+  "plugins": {
+    "playwright@claude-plugins-official": [
+      {
+        "scope": "user",
+        "installPath": "/Users/eric.juquel/.claude/plugins/cache/claude-plugins-official/playwright/bb7730114d87",
+        "version": "bb7730114d87",
+        "installedAt": "2026-03-30T12:18:55.934Z",
+        "lastUpdated": "2026-04-18T15:38:32.790Z",
+        "gitCommitSha": "183a6ca35d5f6b4ba99bf89777bd0aa432fa3d2e"
+      }
+    ],
+    "typescript-lsp@claude-plugins-official": [
+      {
+        "scope": "user",
+        "installPath": "/Users/eric.juquel/.claude/plugins/cache/claude-plugins-official/typescript-lsp/1.0.0",
+        "version": "1.0.0",
+        "installedAt": "2026-03-30T12:19:51.326Z",
+        "lastUpdated": "2026-03-30T12:19:51.326Z",
+        "gitCommitSha": "183a6ca35d5f6b4ba99bf89777bd0aa432fa3d2e"
+      }
+    ],
+    "superpowers@claude-plugins-official": [
+      {
+        "scope": "user",
+        "installPath": "/Users/eric.juquel/.claude/plugins/cache/claude-plugins-official/superpowers/5.0.7",
+        "version": "5.0.7",
+        "installedAt": "2026-04-01T17:25:55.925Z",
+        "lastUpdated": "2026-04-01T17:25:55.925Z",
+        "gitCommitSha": "dd237283dbfe466e11bd4be55acf14ecb8f6636e"
+      }
+    ]
+  }
+}
